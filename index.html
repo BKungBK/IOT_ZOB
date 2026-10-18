@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05413303 อินเทอร์เน็ตของสรรพสิ่งเพื่อธุรกิจ — ระบบฝึกทำข้อสอบและสรุปเก็งสอบครบ 9 บท (RUTS)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-bar" role="banner">
+    <div class="top-bar-inner">
+      <div class="brand-identity">
+        <svg class="brand-chip-svg" width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <rect x="5" y="5" width="18" height="18" rx="2.5" stroke="currentColor" stroke-width="1.75"/>
+          <rect x="9" y="9" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1.75"/>
+          <path d="M9 2V5M14 2V5M19 2V5M9 23V26M14 23V26M19 23V26M2 9H5M2 14H5M2 19H5M23 9H26M23 14H26M23 19H26" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-titles">
+          <h1 class="site-title">05413303 อินเทอร์เน็ตของสรรพสิ่งเพื่อธุรกิจ</h1>
+        </div>
+      </div>
+
+      <nav class="mode-nav" aria-label="โหมดการใช้งานหลัก">
+        <button type="button" class="mode-tab svg-nav-btn" data-view="home" id="tab-home" title="หน้าแรก (เลือกบทเรียนและตัวกรอง)" aria-label="หน้าแรก (เลือกบทเรียนและตัวกรอง)">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1V9.5z"/>
+          </svg>
+        </button>
+        <button type="button" class="mode-tab svg-nav-btn is-active" data-view="practice" id="tab-practice" title="หน้าตอบข้อสอบ" aria-label="หน้าตอบข้อสอบ">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+          </svg>
+          <span class="tab-count" id="nav-total-count">180</span>
+        </button>
+        <button type="button" class="mode-tab svg-nav-btn" data-view="exam" id="tab-exam" title="จำลองสอบจริง 60 ข้อ (กระดาษคำตอบ 2B OMR)" aria-label="จำลองสอบจริง 60 ข้อ (กระดาษคำตอบ 2B OMR)">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="9" cy="8" r="1.25"/><circle cx="15" cy="8" r="1.25"/><circle cx="9" cy="13" r="1.25"/><circle cx="15" cy="13" r="1.25"/><circle cx="9" cy="18" r="1.25"/><circle cx="15" cy="18" r="1.25"/>
+          </svg>
+        </button>
+        <button type="button" class="mode-tab svg-nav-btn" data-view="review" id="tab-review" title="ทบทวนข้อที่ผิด & ข้อที่ปักหมุด" aria-label="ทบทวนข้อที่ผิด & ข้อที่ปักหมุด">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+          </svg>
+          <span class="tab-count" id="nav-review-count">0</span>
+        </button>
+        <button type="button" class="mode-tab svg-nav-btn" data-view="cheatsheet" id="tab-cheatsheet" title="สรุปเก็งสอบ & ผังขา Pin ครบ 9 บท" aria-label="สรุปเก็งสอบ & ผังขา Pin ครบ 9 บท">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+          </svg>
+        </button>
+      </nav>
+
+      <div class="top-actions">
+        <button type="button" class="icon-btn" id="btn-theme-toggle" aria-label="สลับโหมดสีหน้าจอ (สว่าง / มืด)" title="สลับโหมดสีหน้าจอ (สว่าง / มืด)">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="workbench-main" id="main-content">
+    <!-- ==========================================
+         VIEW 0: HOME DASHBOARD (หน้าแรก: เลือกบทเรียน & ตั้งค่า)
+         ========================================== -->
+    <section class="view-panel" id="view-home" aria-labelledby="tab-home">
+      <div class="home-dashboard">
+        <!-- Top Row: Scoreboard + Filter & Settings Deck -->
+        <div class="home-top-deck">
+          <div class="home-card home-stats-card">
+            <div class="mastery-header-row">
+              <h2 class="rail-heading">สถิติความแม่นยำสะสม</h2>
+              <button type="button" class="text-action-btn danger-text" id="btn-reset-progress">รีเซ็ตสถิติ</button>
+            </div>
+            <dl class="mastery-metrics-grid">
+              <div class="metric-card">
+                <dt>ทำแล้ว</dt>
+                <dd><span id="stat-answered">0</span><small>/180</small></dd>
+              </div>
+              <div class="metric-card metric-card-good">
+                <dt>ตอบถูก</dt>
+                <dd><span id="stat-correct">0</span> <small>(<span id="stat-accuracy">0%</span>)</small></dd>
+              </div>
+              <div class="metric-card metric-card-warn">
+                <dt>ทบทวน</dt>
+                <dd><span id="stat-mistakes">0</span><small> ข้อ</small></dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="home-card home-filters-card">
+            <div class="home-filters-row">
+              <div class="filter-group-inline">
+                <span class="filter-group-label">แนวข้อสอบ:</span>
+                <div class="filter-pills" id="category-filter-group" role="group" aria-label="กรองตามแนวข้อสอบ">
+                  <button type="button" class="filter-pill is-active" data-category="all">ทุกแนวข้อสอบ</button>
+                  <button type="button" class="filter-pill" data-category="concept">ทฤษฎี/สถาปัตยกรรม</button>
+                  <button type="button" class="filter-pill" data-category="hardware">ต่อวงจร/ขา Pin</button>
+                  <button type="button" class="filter-pill" data-category="code">วิเคราะห์โค้ด C/INO</button>
+                  <button type="button" class="filter-pill" data-category="applied">ประยุกต์/แก้โจทย์ Lab</button>
+                </div>
+              </div>
+              <div class="filter-group-inline">
+                <span class="filter-group-label">ความยาก:</span>
+                <div class="filter-pills" id="difficulty-filter-group" role="group" aria-label="กรองตามระดับความยาก">
+                  <button type="button" class="filter-pill is-active" data-difficulty="all">ทุกระดับ</button>
+                  <button type="button" class="filter-pill" data-difficulty="เก็งข้อสอบเน้นๆ">★ เก็งข้อสอบเน้นๆ</button>
+                  <button type="button" class="filter-pill" data-difficulty="ปานกลาง">ปานกลาง</button>
+                  <button type="button" class="filter-pill" data-difficulty="พื้นฐาน">พื้นฐาน</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="home-controls-bottom">
+              <div class="search-box-wrap home-search-wrap">
+                <input type="search" id="search-input" class="search-input" placeholder="ค้นหาโจทย์ เช่น L298N, D2, 0x27, Blynk..." aria-label="ค้นหาโจทย์ตามคำสำคัญ">
+              </div>
+              <label class="checkbox-label">
+                <input type="checkbox" id="chk-auto-advance" checked>
+                <span>Auto-Next ไปข้อถัดไป</span>
+              </label>
+              <div class="delay-control-inline">
+                <label for="select-auto-delay" class="delay-select-label">หน่วงเวลา:</label>
+                <select id="select-auto-delay" class="delay-select" aria-label="ความเร็วในการเลื่อนไปข้อถัดไปอัตโนมัติ">
+                  <option value="900">0.9s (เร็ว)</option>
+                  <option value="2000" selected>2.0s (แนะนำ)</option>
+                  <option value="3200">3.2s (ละเอียด)</option>
+                </select>
+              </div>
+              <label class="checkbox-label">
+                <input type="checkbox" id="chk-shuffle-questions">
+                <span>สุ่มข้อ</span>
+              </label>
+              <button type="button" class="cta-primary-btn home-start-btn" id="btn-enter-quiz-now">
+                <span>เริ่มทำข้อสอบทันที</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Chapter Grid (9 Chapters + Select All) -->
+        <div class="home-chapters-panel">
+          <div class="home-chapters-header">
+            <div>
+              <h2 class="home-section-title">เลือกบทเรียนเพื่อเข้าสู่หน้าตอบข้อสอบ (คลิกที่บทเพื่อเริ่มทำทันที)</h2>
+            </div>
+            <button type="button" class="cta-secondary-btn" id="btn-select-all-chapters">รวมข้อสอบทุกบท (180 ข้อ)</button>
+          </div>
+          <div class="chapter-cards-grid" id="chapter-selector-list" role="list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 1: SPACIOUS FULL-SLOT ANSWERING SCREEN (หน้าตอบข้อสอบเต็มช่อง + ปุ่ม SVG ล้วน)
+         ========================================== -->
+    <section class="view-panel is-active" id="view-practice" aria-labelledby="tab-practice">
+      <div class="focus-quiz-shell">
+        <!-- Ultra-Clean SVG Icon Bar & Jump Strip -->
+        <div class="focus-quiz-topbar">
+          <div class="focus-topbar-left">
+            <button type="button" class="svg-icon-btn" id="btn-back-to-home" title="กลับหน้าเลือกบทเรียนและตัวกรอง (Home)" aria-label="กลับหน้าเลือกบทเรียนและตัวกรอง (Home)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/>
+              </svg>
+            </button>
+            <span class="active-deck-badge" id="active-deck-label">180 ข้อ</span>
+          </div>
+
+          <div class="question-jump-strip" id="practice-jump-strip" role="navigation" aria-label="แถบข้ามไปยังข้อสอบ"></div>
+
+          <div class="stage-actions">
+            <button type="button" class="svg-icon-btn is-auto-on" id="auto-advance-status-pill" title="ไปข้อถัดไปอัตโนมัติ (คลิกเพื่อเปิด/ปิด)" aria-label="ไปข้อถัดไปอัตโนมัติ (คลิกเพื่อเปิด/ปิด)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+              <span class="svg-btn-mini-badge" id="auto-advance-pill-text">2s</span>
+            </button>
+            <button type="button" class="svg-icon-btn" id="btn-bookmark-current" title="ปักหมุดข้อนี้ไว้ทบทวน (คีย์ลัด B)" aria-label="ปักหมุดข้อนี้ไว้ทบทวน (คีย์ลัด B)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+              </svg>
+              <span class="sr-only" id="bookmark-btn-label">ปักหมุด</span>
+            </button>
+            <button type="button" class="svg-icon-btn" id="btn-open-chapter-sheet" title="ดูตารางสรุปเนื้อหาของบทนี้" aria-label="ดูตารางสรุปเนื้อหาของบทนี้">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Centered Spacious Question Card -->
+        <article class="exam-sheet focus-exam-sheet" id="practice-question-card">
+          <div class="question-prompt-zone">
+            <div class="question-meta-header">
+              <span class="position-counter" id="practice-counter">ข้อที่ 1 / 180</span>
+              <span class="chapter-tag" id="practice-chapter-tag">บทที่ 1</span>
+              <span class="category-tag" id="practice-category-tag">ทฤษฎี</span>
+              <span class="difficulty-tag" id="practice-difficulty-tag">พื้นฐาน</span>
+            </div>
+            <h2 class="question-stem" id="practice-question-text">กำลังโหลดโจทย์ข้อสอบ...</h2>
+          </div>
+
+          <!-- Optional Arduino IDE Code Block -->
+          <div class="arduino-code-container is-hidden" id="practice-code-wrap">
+            <div class="arduino-code-header">
+              <span class="sketch-tab-name" id="practice-sketch-name">sketch_esp8266.ino · Arduino IDE</span>
+              <span class="sketch-board-label">NodeMCU 1.0 (ESP-12E Module)</span>
+            </div>
+            <pre class="arduino-code-pre"><code id="practice-code-content"></code></pre>
+          </div>
+
+          <!-- Vertically Stacked 4 Choices (A, B, C, D) -->
+          <div class="choices-list choices-vertical" id="practice-choices-list" role="radiogroup" aria-label="ตัวเลือกคำตอบ 4 ตัวเลือก"></div>
+
+          <!-- Instant Explanation & Source Citation Box -->
+          <div class="explanation-box is-hidden" id="practice-explanation-box" aria-live="polite">
+            <div class="auto-advance-progress-track is-hidden" id="auto-advance-track">
+              <div class="auto-advance-progress-bar" id="auto-advance-bar"></div>
+            </div>
+            <div class="explanation-verdict-bar" id="practice-verdict-bar">
+              <span class="verdict-title" id="practice-verdict-title">เฉลยและคำอธิบายละเอียด</span>
+              <div class="verdict-right-group">
+                <button type="button" class="cancel-auto-btn is-hidden" id="btn-cancel-auto">หยุดนับเวลา (อ่านเฉลยต่อ)</button>
+                <span class="source-badge" id="practice-source-badge">อ้างอิงสไลด์</span>
+              </div>
+            </div>
+            <p class="explanation-body" id="practice-explanation-text"></p>
+          </div>
+
+          <!-- Bottom Navigation Controls -->
+          <footer class="sheet-footer">
+            <button type="button" class="nav-step-btn" id="btn-prev-question">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6"/>
+              </svg>
+              <span>ข้อก่อนหน้า</span>
+            </button>
+            <div class="keyboard-hint">คีย์ลัด: กดปุ่ม <code>1</code>–<code>4</code> หรือ <code>A</code>–<code>D</code> เลือกคำตอบ · <code>←</code> <code>→</code> เปลี่ยนข้อ · <code>B</code> ปักหมุด</div>
+            <button type="button" class="nav-step-btn primary-step-btn" id="btn-next-question">
+              <span>ข้อถัดไป</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </button>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 2: 60-QUESTION FINAL EXAM SIMULATOR (2B OMR)
+         ========================================== -->
+    <section class="view-panel" id="view-exam" aria-labelledby="tab-exam">
+      <!-- Pre-Exam Instructions & Setup Banner -->
+      <div class="exam-intro-sheet" id="exam-setup-screen">
+        <div class="exam-intro-grid">
+          <div class="exam-rules-column">
+            <h2 class="section-heading">จำลองการสอบปลายภาคเรียนที่ 1/2569 (ปรนัย 60 ข้อ)</h2>
+            <p class="lead-paragraph">ออกแบบตามกฎระเบียบการสอบจริงใน LMS ของ ผศ.จตุพร จิรันดร ทุกประการ เพื่อฝึกความแม่นยำทั้งเนื้อหาและการฝนกระดาษคำตอบคอมพิวเตอร์</p>
+
+            <ul class="official-rules-list">
+              <li><strong>ออกสอบตั้งแต่บทที่ 1 ถึง บทที่ 9:</strong> สุ่มข้อสอบตามสัดส่วนเนื้อหาจริงรวม <strong>60 ข้อ (ข้อละ 1 คะแนน คิดเป็น 30% ของเกรดรวม)</strong></li>
+              <li><strong>กฎเหล็กเรื่องตัวเลือก A–D บนกระดาษคำตอบ 5 ช่อง (A–E):</strong> ข้อสอบมีตัวเลือก 4 ตัวคือ <code>A</code> <code>B</code> <code>C</code> <code>D</code> แต่กระดาษคำตอบคอมพิวเตอร์มี 5 ช่องคือ <code>A</code> <code>B</code> <code>C</code> <code>D</code> <code>E</code> ห้ามเผลอระบายช่อง <code>E</code> เด็ดขาด!</li>
+              <li><strong>การระบายรหัสนักศึกษา (Student ID):</strong> ให้ระบายเฉพาะ <strong>ตัวเลข 3 ตัวหลังสุด</strong> ของรหัสนักศึกษาตนเอง (เช่น <code>166205110078</code> ให้ระบาย <code>078</code>)</li>
+              <li><strong>อุปกรณ์ในการสอบจริง:</strong> ต้องใช้ <strong>ดินสอ 2B</strong> แรเงาเต็มวงเท่านั้น (หากไม่ใช้ดินสอ 2B เครื่องตรวจจะไม่อ่านและได้ 0 คะแนนอัตโนมัติ)</li>
+            </ul>
+
+            <div class="student-id-setup">
+              <label for="exam-student-id" class="field-label">ระบุรหัสนักศึกษา 3 ตัวท้ายของคุณเพื่อซ้อมลงกระดาษคำตอบ:</label>
+              <div class="student-id-input-row">
+                <input type="text" id="exam-student-id" class="student-id-input" maxlength="3" value="078" pattern="[0-9]{3}" aria-label="รหัสนักศึกษา 3 ตัวท้าย">
+                <select id="exam-duration-select" class="duration-select" aria-label="เวลาในการทำข้อสอบ">
+                  <option value="90">เวลาสอบ 90 นาที (มาตรฐาน 60 ข้อ)</option>
+                  <option value="60">เวลาสอบ 60 นาที (ฝึกสปีดข้อละ 1 นาที)</option>
+                  <option value="120">เวลาสอบ 120 นาที (ทบทวนละเอียด)</option>
+                </select>
+                <button type="button" class="cta-primary-btn" id="btn-start-exam">เริ่มทำข้อสอบจำลอง 60 ข้อ</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="exam-blueprint-column">
+            <h3 class="sub-heading">สัดส่วนข้อสอบทั้ง 9 บทในชุดจำลอง 60 ข้อ</h3>
+            <table class="blueprint-table">
+              <thead>
+                <tr>
+                  <th>บทเรียน</th>
+                  <th>หัวข้อสำคัญที่ออกสอบ</th>
+                  <th>จำนวนข้อ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>บทที่ 1</td><td>ความหมาย IoT, ประโยชน์ 7 ด้าน, Layers, MCU vs MPU</td><td>6 ข้อ</td></tr>
+                <tr><td>บทที่ 2</td><td>ขา NodeMCU ESP8266 (D0-D8, I2C, A0, EN/RST, ESP-12E)</td><td>8 ข้อ</td></tr>
+                <tr><td>บทที่ 3</td><td>การตั้งค่า Arduino IDE, Boards Manager, การลง Library</td><td>5 ข้อ</td></tr>
+                <tr><td>บทที่ 4</td><td>LED, Breadboard, แถบสีตัวต้านทาน, โค้ดไฟกระพริบ & สวิตช์</td><td>8 ข้อ</td></tr>
+                <tr><td>บทที่ 5</td><td>วงจร ADC (A0), Potentiometer, จอ LCD 16x2 I2C (0x27)</td><td>7 ข้อ</td></tr>
+                <tr><td>บทที่ 6</td><td>เซนเซอร์ LDR, Ultrasonic HC-SR04 (40kHz), DHT11, Function</td><td>8 ข้อ</td></tr>
+                <tr><td>บทที่ 7</td><td>สัญญาณ PWM, Duty Cycle, analogWrite(), Serial.parseInt()</td><td>6 ข้อ</td></tr>
+                <tr><td>บทที่ 8</td><td>Actuators, มอเตอร์, ตาราง L298N, Relay (NC/NO/COM), C Function</td><td>8 ข้อ</td></tr>
+                <tr><td>บทที่ 9</td><td>Blynk Architecture, WiFi.begin/localIP, BLYNK_WRITE(V0)</td><td>4 ข้อ</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Exam Workspace (Hidden until exam starts) -->
+      <div class="exam-active-layout is-hidden" id="exam-active-screen">
+        <div class="exam-question-column">
+          <div class="exam-status-bar">
+            <div class="exam-progress-text">
+              <span class="position-counter" id="exam-q-counter">ข้อที่ 1 / 60</span>
+              <span class="chapter-tag" id="exam-q-chapter">บทที่ 1</span>
+            </div>
+            <div class="exam-timer-box" id="exam-timer-box">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+              </svg>
+              <span id="exam-timer-display">90:00</span>
+            </div>
+            <button type="button" class="cta-submit-exam-btn" id="btn-submit-exam">ส่งกระดาษคำตอบ (ตรวจคะแนน)</button>
+          </div>
+
+          <article class="exam-sheet">
+            <h2 class="question-stem" id="exam-question-text"></h2>
+            <div class="arduino-code-container is-hidden" id="exam-code-wrap">
+              <div class="arduino-code-header">
+                <span class="sketch-tab-name">exam_sketch.ino · Arduino IDE</span>
+                <span class="sketch-board-label">NodeMCU 1.0 (ESP-12E Module)</span>
+              </div>
+              <pre class="arduino-code-pre"><code id="exam-code-content"></code></pre>
+            </div>
+
+            <div class="choices-list" id="exam-choices-list" role="radiogroup" aria-label="ตัวเลือกข้อสอบ A B C D"></div>
+
+            <div class="omr-e-warning is-hidden" id="exam-omr-e-warning" role="alert">
+              <strong>คำเตือนจากกฎห้องสอบจริง:</strong> ข้อสอบวิชานี้มีเฉพาะตัวเลือก <code>A</code> <code>B</code> <code>C</code> <code>D</code> เท่านั้น! ในกระดาษคำตอบคอมพิวเตอร์มีช่อง <code>E</code> มาให้ แต่ห้ามแรเงาช่อง <code>E</code> เด็ดขาดเพราะจะทำให้เสียคะแนนฟรี!
+            </div>
+
+            <footer class="sheet-footer">
+              <button type="button" class="nav-step-btn" id="btn-exam-prev">ข้อก่อนหน้า</button>
+              <span class="answered-tally" id="exam-answered-tally">ฝนคำตอบแล้ว 0 / 60 ข้อ</span>
+              <button type="button" class="nav-step-btn primary-step-btn" id="btn-exam-next">ข้อถัดไป</button>
+            </footer>
+          </article>
+        </div>
+
+        <!-- Right Side: Authentic 2B OMR Computerized Answer Sheet (Columns A B C D E) -->
+        <aside class="omr-sheet-panel" aria-label="กระดาษคำตอบคอมพิวเตอร์จำลอง 2B">
+          <div class="omr-sheet-header">
+            <div class="omr-title-block">
+              <h3 class="omr-sheet-title">กระดาษคำตอบคอมพิวเตอร์ (2B OMR)</h3>
+              <p class="omr-sheet-meta">รหัส 3 ตัวท้าย: <strong id="omr-student-id-display">078</strong> · แรเงาเต็มวง A–D (ห้ามฝน E)</p>
+            </div>
+          </div>
+          <div class="omr-grid-scroll" id="omr-bubbles-container"></div>
+        </aside>
+      </div>
+
+      <!-- Post-Exam Score & Chapter Breakdown Report -->
+      <div class="exam-report-sheet is-hidden" id="exam-result-screen">
+        <div class="report-header-bar">
+          <div>
+            <h2 class="section-heading" id="report-headline">ผลการจำลองสอบปลายภาค 60 ข้อ</h2>
+            <p class="lead-paragraph" id="report-subline"></p>
+          </div>
+          <div class="report-actions">
+            <button type="button" class="cta-primary-btn" id="btn-retake-exam">สุ่มชุดข้อสอบ 60 ข้อชุดใหม่</button>
+          </div>
+        </div>
+
+        <div class="report-breakdown-grid" id="report-chapter-breakdown"></div>
+
+        <h3 class="sub-heading">เฉลยละเอียดรายข้อครบทั้ง 60 ข้อ</h3>
+        <div class="report-review-list" id="report-questions-review"></div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 3: REVIEW MISTAKES & BOOKMARKS
+         ========================================== -->
+    <section class="view-panel" id="view-review" aria-labelledby="tab-review">
+      <div class="review-header-bar">
+        <div>
+          <h2 class="section-heading">คลังทบทวนจุดอ่อน & ข้อที่ปักหมุดไว้เก็งสอบ</h2>
+          <p class="lead-paragraph">รวมข้อที่คุณเคยตอบผิดในการฝึกหรือการสอบจำลอง และข้อที่คุณกดปักหมุดไว้ทบทวนก่อนเข้าห้องสอบจริง</p>
+        </div>
+        <div class="review-subtabs" role="tablist">
+          <button type="button" class="filter-pill is-active" data-review-type="mistakes" id="subtab-mistakes">ข้อที่เคยตอบผิด (<span id="count-mistakes">0</span>)</button>
+          <button type="button" class="filter-pill" data-review-type="bookmarks" id="subtab-bookmarks">ข้อที่ปักหมุดไว้ (<span id="count-bookmarks">0</span>)</button>
+        </div>
+      </div>
+
+      <div class="review-cards-container" id="review-list-container"></div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 4: 9-CHAPTER CHEAT-SHEETS & INTERACTIVE TOOLS
+         ========================================== -->
+    <section class="view-panel" id="view-cheatsheet" aria-labelledby="tab-cheatsheet">
+      <div class="cheatsheet-layout">
+        <aside class="cheatsheet-nav" aria-label="เลือกบทสรุปเนื้อหา">
+          <h2 class="rail-heading">สรุปเนื้อหา & เครื่องมือช่วยจำ</h2>
+          <div class="cheatsheet-nav-list" id="cheatsheet-chapter-nav"></div>
+        </aside>
+
+        <div class="cheatsheet-content-area" id="cheatsheet-main-content"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GSAP Motion Runtime + Data & Application Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script src="data/chapters.js"></script>
+  <script src="data/questions-ch1-ch3.js"></script>
+  <script src="data/questions-ch4-ch6.js"></script>
+  <script src="data/questions-ch7-ch9.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
